@@ -4,6 +4,7 @@
 }
 body{
     background-color: red;
+    overflow: hidden;
 }
 .gameContainer{
     background-image: url(bg.png);
@@ -30,4 +31,48 @@ body{
     position: absolute;
     bottom: 0;
     left: 44vw;
+}
+.animateDino{
+    animation: dino 0.6s linear;
+}
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+.gameOver{
+    position: relative;
+    top: 63px;
+    font-size: 53px;
+    text-align: center;
+    font-family: 'Akaya Telivigala', cursive;
+}
+.scoreCont{
+    color: #54212f;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 31px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: 'Akaya Telivigala', cursive;
+    font-size: 25px;
+    border-radius: 10px;
+}
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 422px;;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
 }
